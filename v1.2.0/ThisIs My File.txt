@@ -1,0 +1,3 @@
+<h3 style='margin:0px;'>Hello green switch</h3>
+<b>you have succesully used the connect method</b>
+<i>connect("your file url here") :=> will return a string value found on that file</i>

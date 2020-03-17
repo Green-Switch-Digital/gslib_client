@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript" src="gslib_client.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+	
+	function _ready(argument) {
+		//when the page is ready, green switch will execute the _ready function
+		//read a text / php / java file from localhost / server / memory card with one line 
+		var data=connect("ThisIs My File.txt")
+		//use a new feature Toast to show a simple popup toast in your browser
+		Toast(data,10)//will show for 10 seconds
+		get(".newclass").setText("Hello world")
+		setTimeout(function(){
+			//fade objects out easily
+			get(".newclass").fadeOut()
+
+		},4000)
+
+	}
+
+</script>
+<h3 class="newclass">Introducing class methods name getting</h3>
+</body>
+</html>

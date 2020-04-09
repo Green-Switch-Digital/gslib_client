@@ -660,6 +660,10 @@ obj.setWidth=function(w){
 this.style.width=w
 }
 
+obj.setHeight=function(w){
+this.style.height=w
+}
+
 obj.setText=function(s){
 	try{
 	this.innerHTML=s
@@ -756,4 +760,20 @@ function addEvent(obj,event_type,func_) {
 function animate(obj,animation) {
 	get(obj).style.animation=animation
 	get(obj).style.webkitAnimation=animation
+}
+
+function require(loc) {
+	var ftype=loc.split(".")[1]
+	if(ftype=="js"){
+	var s=create("script")
+	s.setAttribute("rel","text/javascript")
+	s.setAttribute("src",loc)
+	document.getElementsByTagName("head")[0].appendChild(s)
+}else{
+	//its css
+	var s=create("link")
+	s.setAttribute("rel","stylesheet")
+	s.setAttribute("href",loc)
+	document.getElementsByTagName("head")[0].appendChild(s)
+}
 }
